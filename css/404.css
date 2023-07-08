@@ -1,0 +1,17 @@
+.error404{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+h1{
+  text-align: center;
+  color: var(--colora);
+  line-height: 30px;
+}
+span{
+  font: var(--p);
+  color: var(--colorp);
+}

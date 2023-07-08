@@ -1,0 +1,13 @@
+#big-savings{
+  color: #3395ff;
+  font-size: min(100px, 20vw);
+  line-height: min(80px, 15vw);
+}
+#st-logogird{
+  margin: 50px auto;
+}
+
+img{
+  box-shadow: none;
+  border-radius: 0px;
+}
