@@ -1,3 +1,11 @@
+h1{
+  display: none;
+}
+
+h2{
+  font: var(--h1);
+}
+
 .h3gap{
   margin: 60px 0px 0px 0px;
   }
