@@ -61,9 +61,18 @@ const darkMode = document.getElementById("myToggle");
 
   // Scroll to top
   const topBtn = document.querySelector(".toTop");
+
+  window.onscroll = function() {displayTopBtn()};
+
+function displayTopBtn() {
+  if (document.documentElement.scrollTop > 1000) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+}
   topBtn.addEventListener('click', toTop);
 
   function toTop(){
     document.documentElement.scrollTop = 0;
-    console.log("clickedtop");
   }
