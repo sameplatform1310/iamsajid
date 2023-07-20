@@ -11,3 +11,7 @@ img{
   box-shadow: none;
   border-radius: 0px;
 }
+
+.half-images, .full-images img{
+  background-color: white;
+}

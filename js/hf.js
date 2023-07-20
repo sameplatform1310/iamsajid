@@ -1,7 +1,12 @@
 
 // Global header
 const header = document.querySelector("header");
-header.innerHTML = `<a href="../"><img src="img/Sajid-logo.png" alt=""> <h3>Sajid M.</h3></a><a href="About">About</a>`;
+header.innerHTML = `<a href="../"><img src="img/Sajid-logo.png" alt=""> <h3>Sajid M.</h3></a>
+  <a href="About">About</a><div class="sidebar">
+  <img id="myToggle" src="img/light-mode.svg" />
+  <img src="img/to-top.svg" alt="" class="toTop" />
+</div>
+  `;
 
 // Global footer
 const footer = document.querySelector("footer");
@@ -29,3 +34,36 @@ if(h1){
 else{
   title.innerText = "Sajid M.";
 }
+
+
+
+// Darkmode
+const darkMode = document.getElementById("myToggle");
+  darkMode.addEventListener("click", changeMode);
+
+  const currentMode = localStorage.getItem("mode");
+  if (currentMode === "dark") {
+    document.body.classList.add("dark-mode");
+    darkMode.src = "img/dark-mode.svg"; 
+  }
+
+  function changeMode() {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("mode", "dark");
+      darkMode.src = "img/dark-mode.svg"; 
+    } else {
+      localStorage.setItem("mode", "light");
+      darkMode.src = "img/light-mode.svg"; 
+    }
+  }
+
+
+  // Scroll to top
+  const topBtn = document.querySelector(".toTop");
+  topBtn.addEventListener('click', toTop);
+
+  function toTop(){
+    document.documentElement.scrollTop = 0;
+    console.log("clickedtop");
+  }
