@@ -90,15 +90,17 @@ footer{
 .footer-svg{
   fill: var(--colora);
   height: 32px;
-  margin-right: 32px;
-  margin-bottom: 90px;
-  margin: 0px 16px 90px 16px
+  margin: 0px 16px 32px 16px;
 }
 
 .footer-svg:hover{
   fill: var(--colors);
 }
 
+#greetings{
+  margin: 60px 0px;
+  font: var(--links);
+}
 a{
   text-decoration: none;
   color: var(--colorp);
