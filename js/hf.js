@@ -2,9 +2,8 @@
 // Global header
 const header = document.querySelector("header");
 header.innerHTML = `<a href="../"><img src="img/Sajid-logo.png" alt=""> <h3>Sajid M.</h3></a>
-  <a href="About">About</a>
-  <img id="myToggle" src="img/light-mode.svg" />
-  `;
+<img id="myToggle" src="img/light-mode.svg" />
+  <a href="About">About</a>`;
 
 // Global footer
 const footer = document.querySelector("footer");
