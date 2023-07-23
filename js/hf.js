@@ -1,9 +1,14 @@
 
 // Global header
 const header = document.querySelector("header");
-header.innerHTML = `<a href="../"><img src="img/Sajid-logo.png" alt=""> <h3>Sajid M.</h3></a>
-<img id="myToggle" src="img/light-mode.svg" />
-  <a href="About">About</a>`;
+header.innerHTML = `<a href="../"><img src="/img/Sajid-logo.png" />Sajid</a>
+<label class="switch">
+  <input id="toggle" type="checkbox" />
+  <div class="toggle">
+    <div class="toggle-button"></div>
+  </div>
+</label>
+<a href="About">About</a>`;
 
 // Global footer
 const footer = document.querySelector("footer");
@@ -34,27 +39,36 @@ else{
 }
 
 
+// Dark mode toggle button
+const toggle = document.getElementById("toggle");
+const darkMode = localStorage.getItem("darkMode");
 
-// Darkmode
-const darkMode = document.getElementById("myToggle");
-  darkMode.addEventListener("click", changeMode);
+if (darkMode === "true") {
+  dark();
+}
 
-  const currentMode = localStorage.getItem("mode");
-  if (currentMode === "dark") {
-    document.body.classList.add("dark-mode");
-    darkMode.src = "img/dark-mode.svg"; 
+toggle.addEventListener("click", toggleMode);
+
+function toggleMode() {
+  if (toggle.checked) {
+    dark();
+  } 
+  else {
+    light();
   }
+}
 
-  function changeMode() {
-    document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-      localStorage.setItem("mode", "dark");
-      darkMode.src = "img/dark-mode.svg"; 
-    } else {
-      localStorage.setItem("mode", "light");
-      darkMode.src = "img/light-mode.svg"; 
-    }
-  }
+function dark() {
+  toggle.checked = true;
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", "true");
+}
+function light() {
+  toggle.checked = false;
+  document.body.classList.remove("dark-mode");
+  localStorage.setItem("darkMode", "false");
+}
+
 
 
   // Scroll to top
