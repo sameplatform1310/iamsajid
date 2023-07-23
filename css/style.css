@@ -39,6 +39,7 @@ body {
   display: inline-block;
   width: 41px;
   height: 21px;
+  border-radius: 11px;
   overflow: hidden;
 }
 
