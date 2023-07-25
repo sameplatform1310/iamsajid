@@ -11,6 +11,7 @@
   --p: 18px/30px var(--ff);
   --subtext: 12px/20px var(--ff);
   --transition: 0.3s ease-in-out;
+  --shadow: #00000030 0px 0px 10px 0px;
 }
 
 .dark-mode {
@@ -126,6 +127,10 @@ header img {
   top: 80vh;
   right: 5vw;
   border-radius: 50%;
+  transition: var(--transition);
+}
+.toTop:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -229,7 +234,7 @@ ol {
 }
 .pf-section:hover {
   background-color: var(--colors);
-  box-shadow: #00000030 0px 0px 10px 0px;
+  box-shadow: var(--shadow);
 }
 
 .pf-section p {
@@ -256,14 +261,14 @@ ol {
   flex: 1;
   min-width: 200px;
   border-radius: 10px;
-  box-shadow: #00000030 0px 0px 10px 0px;
+  box-shadow: var(--shadow);
 }
 
 img,
 video {
   width: 100%;
   border-radius: 10px;
-  box-shadow: #00000030 0px 0px 10px 0px;
+  box-shadow: var(--shadow);
 }
 
 .plain-columns {
@@ -292,7 +297,7 @@ video {
   min-width: 200px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: #00000030 0px 0px 10px 0px;
+  box-shadow: var(--shadow);
 }
 
 .full-images {
@@ -317,6 +322,6 @@ video {
 
   .pf-section {
     background-color: var(--colors);
-    box-shadow: #00000030 0px 0px 10px 0px;
+    box-shadow: var(--shadow);
   }
 }
