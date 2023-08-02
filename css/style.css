@@ -272,6 +272,7 @@ video {
 }
 
 .img-padding {
+  width: calc(100% - 40px);
   padding: 20px;
 }
 
