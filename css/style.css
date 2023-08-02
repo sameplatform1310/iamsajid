@@ -271,6 +271,10 @@ video {
   box-shadow: var(--shadow);
 }
 
+.img-padding {
+  padding: 20px;
+}
+
 .plain-columns {
   margin-top: 40px;
   display: flex;

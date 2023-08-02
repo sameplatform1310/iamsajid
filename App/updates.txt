@@ -1,7 +1,0 @@
-autocomplete dropdown scrolling with key fixed.
-error messages are now being displayed in the page, instead of an alert.
-error messages are customized
-input field now in case senstive. now letters will be matched irrespective of case. so, a=A.
-new cities being displayed at the top of the page
-Added type scale
-autocomplete closes after submit city

@@ -1,0 +1,96 @@
+[33mcommit a5d0ebfa3a679eae1451fdc6dfcdd6c6dced71bd[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Wed Jul 26 03:02:22 2023 +0530
+
+    portfolio reorder
+
+[33mcommit 9cb3eee104b1dd1b4c706485bc79b09f7c7db990[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 23 14:07:03 2023 +0530
+
+    minor css for toggle
+
+[33mcommit e3569bd8b99fdbfb18567d331043b06786d6de25[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 23 13:57:28 2023 +0530
+
+    dark mode checkbox toggle
+
+[33mcommit 69f48bd568b5af7e94d6f449976fc47148ba91d5[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sat Jul 22 22:28:18 2023 +0530
+
+    dark mode toggle
+
+[33mcommit a1c1c661e6d852416ed232e97f46dc5841611209[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Fri Jul 21 22:18:09 2023 +0530
+
+    footer greetings and toTop button changes
+
+[33mcommit 9e02af813a211082a180d83c2ecb35d5151c9e1f[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Fri Jul 21 02:16:10 2023 +0530
+
+    dark mode in header, sidebar removed
+
+[33mcommit f3c4cf6c5cdae1d0b40c58c0c6f55876e4adcfbc[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Fri Jul 21 01:02:17 2023 +0530
+
+    few changes to sidebar
+
+[33mcommit 2a664df60c020a2d1397d69e7913e20de4b5a702[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Thu Jul 20 19:37:39 2023 +0530
+
+    sidebar darkmode and to top button
+
+[33mcommit d8df009d9de3137d0cc817ba9338f17949663675[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 16 02:13:12 2023 +0530
+
+    Global title and favicon
+
+[33mcommit e1c2857f3b7ec362583380a4f8d246f652db4e24[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Wed Jul 12 18:29:48 2023 +0530
+
+    minor changes
+
+[33mcommit df53439efe1b423d3bd15b0131beac02aaf3b0e9[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Mon Jul 10 17:24:03 2023 +0530
+
+    footer date js
+
+[33mcommit 6e3ccc81d0449c699eb7b36e9b56118b47f695c4[m
+Merge: baa7de7 1a66a17
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 9 03:28:11 2023 +0530
+
+    Merge branch 'main' of https://github.com/sameplatform1310/iamsajid
+
+[33mcommit baa7de711d86132603e40c7e26c19778da741e4a[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 9 03:23:17 2023 +0530
+
+    some fixes
+
+[33mcommit 1a66a1784925b722d1cb4cd7cddae8f562a59862[m
+Author: sameplatform1310 <130563480+sameplatform1310@users.noreply.github.com>
+Date:   Sun Jul 9 00:56:50 2023 +0530
+
+    Create CNAME
+
+[33mcommit 424e7d8dc7b0123577c56e271cc18ea51e537124[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 9 00:53:01 2023 +0530
+
+    initial commit
+
+[33mcommit 2e03c622eb9f65731409f0677c73bcc124a4f3b8[m
+Author: sameplatform1310 <sajid61425@gmail.com>
+Date:   Sun Jul 9 00:48:56 2023 +0530
+
+    Initial commit
