@@ -270,6 +270,9 @@ video {
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
+.section > img {
+  margin: 20px 0px;
+}
 
 .img-padding {
   width: calc(100% - 40px);
