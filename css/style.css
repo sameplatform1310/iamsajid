@@ -18,7 +18,7 @@
   --colorp: #f9f9f9;
   --colora: #999;
   --colorbody: #333;
-  --colors: #393939;
+  --colors: #444;
 }
 
 html {
@@ -119,18 +119,23 @@ header img {
   box-shadow: none;
 }
 
-.toTop {
-  display: none;
-  cursor: pointer;
-  width: 30px;
+/* To top button */
+.to-top {
   position: fixed;
-  top: 80vh;
+  top: 85vh;
   right: 5vw;
-  border-radius: 50%;
-  transition: var(--transition);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colors);
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
 }
-.toTop:hover {
-  transform: scale(1.1);
+.to-top svg {
+  fill: var(--colorp);
 }
 
 footer {
