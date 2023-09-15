@@ -6,8 +6,7 @@ header.innerHTML = `<a href="../"><img src="/img/Sajid-logo.png" />Sajid</a>
   <div class="toggle">
     <div class="toggle-button"></div>
   </div>
-</label>
-<a href="About">About</a>`;
+</label>`;
 
 // Google Analytics
 var gaScript = document.createElement("script");
@@ -36,11 +35,14 @@ document.head.appendChild(favicon);
 // Dynamic Title
 const title = document.querySelector("title");
 const h1 = document.querySelector("h1");
-if (h1) {
-  const h1Value = h1.innerText;
-  title.innerText = `${h1Value} - Sajid M.`;
-} else {
-  title.innerText = "Sajid M.";
+
+if (title.textContent.trim() === "") {
+  if (h1) {
+    const h1Value = h1.innerText;
+    title.textContent = `${h1Value} - Sajid M.`;
+  } else {
+    title.textContent = "Sajid M.";
+  }
 }
 
 // Dark mode toggle button

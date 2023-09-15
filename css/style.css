@@ -7,6 +7,7 @@
   --h1: bold min(11vw, 54px) / min(11vw, 54px) var(--ff);
   --h2: bold 36px/36px var(--ff);
   --h3: bold 24px/30px var(--ff);
+  --quote: 24px/30px var(--ff);
   --links: bold 18px/18px var(--ff);
   --p: 18px/30px var(--ff);
   --subtext: 12px/20px var(--ff);
@@ -110,11 +111,12 @@ header a {
   align-items: center;
   gap: 6px;
   padding: 20px 0px;
+  font: var(--h3);
 }
 
 header img {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border-radius: 0px;
   box-shadow: none;
 }
@@ -207,10 +209,16 @@ h2 {
 h3 {
   font: var(--h3);
 }
+.quote {
+  font: var(--quote);
+}
 p,
 ul,
 ol {
   font: var(--p);
+}
+.links {
+  font: var(--links);
 }
 .subtext {
   font: var(--subtext);
@@ -220,6 +228,32 @@ ol {
   width: 90%;
   margin: 90px auto 0px auto;
   max-width: 1080px;
+}
+
+#about {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+#about > div {
+  flex: 1;
+  min-width: 300px;
+}
+.skills {
+  display: flex;
+  gap: 40px;
+  box-shadow: var(--shadow);
+  padding: 20px 40px;
+  border-radius: 8px;
+  max-width: fit-content;
+  background-color: var(--colors);
+}
+
+.skills ul {
+  margin-left: -20px;
 }
 
 .portfolio {
@@ -336,5 +370,20 @@ video {
   .pf-section {
     background-color: var(--colors);
     box-shadow: var(--shadow);
+  }
+
+  .skills {
+    display: flex;
+    /* gap: 20px; */
+    box-shadow: var(--shadow);
+    padding: 20px 20px;
+    border-radius: 8px;
+    max-width: fit-content;
+  }
+  .hero-image {
+    display: none;
+  }
+  .scrolltext {
+    display: none;
   }
 }
