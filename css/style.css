@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  text-wrap: balance;
+  /* text-wrap: balance; */
   margin: auto;
   background-color: var(--colorbody);
   color: var(--colorp);
@@ -242,6 +242,10 @@ ol {
   flex: 1;
   min-width: 300px;
 }
+
+#about span {
+  font-size: 24px;
+}
 .skills {
   display: flex;
   gap: 40px;
@@ -256,51 +260,42 @@ ol {
   margin-left: -20px;
 }
 
-.portfolio {
-  width: 90%;
-  margin: auto;
-  max-width: 1120px;
+.p-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+.p-link::after {
+  content: "\27f6";
+  font-size: 28px;
+  position: absolute;
+  top: 0px;
+  right: -40px;
 }
 
-.pf-section {
-  margin-top: 90px;
-  padding: 20px;
-  border-radius: 10px;
+.pf-card {
+  width: 90vw;
+  max-width: 1080px;
+  margin: 200px auto;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: 0.2s ease-in-out;
-}
-.pf-section:hover {
-  background-color: var(--colors);
-  box-shadow: var(--shadow);
-}
-
-.pf-section p {
-  margin: 0px;
-}
-.pf-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
-}
-.pf-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 36px;
-}
-
-.pf-images {
-  display: flex;
   flex-wrap: wrap;
-  gap: 20px;
 }
-.pf-images > * {
+.pf-image {
+  flex: 1.5;
+  min-width: min(100%, 460px);
+}
+.pf-about {
   flex: 1;
-  min-width: 200px;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
+  min-width: 260px;
+}
+.pf-image img {
+  transition: var(--transition);
+}
+.pf-image img:hover {
+  transform: scale(1.01);
+  transition: var(--transition);
 }
 
 img,
@@ -365,11 +360,6 @@ video {
   .btn {
     padding: 15px 0px;
     width: 90vw;
-  }
-
-  .pf-section {
-    background-color: var(--colors);
-    box-shadow: var(--shadow);
   }
 
   .skills {
