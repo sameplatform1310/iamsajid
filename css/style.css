@@ -165,6 +165,7 @@ a {
   border-radius: 8px;
   padding: 12px 24px;
   transition: 0.2s ease-in-out;
+  text-align: center;
 }
 
 .btn:hover {
