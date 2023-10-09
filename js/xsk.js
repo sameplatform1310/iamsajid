@@ -1,12 +1,32 @@
+// Google font
+document.addEventListener("DOMContentLoaded", function () {
+  var head = document.head;
+
+  var link1 = document.createElement("link");
+  link1.rel = "preconnect";
+  link1.href = "https://fonts.googleapis.com";
+  head.appendChild(link1);
+
+  var link2 = document.createElement("link");
+  link2.rel = "preconnect";
+  link2.href = "https://fonts.gstatic.com";
+  link2.crossOrigin = "anonymous";
+  head.appendChild(link2);
+
+  var link3 = document.createElement("link");
+  link3.rel = "stylesheet";
+  link3.href =
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";
+  head.appendChild(link3);
+});
+
 // Global header
 const header = document.querySelector("header");
-header.innerHTML = `<a href="../"><img src="/img/Sajid-logo.png" />Sajid</a>
-<div class="aswitch">
-  <input id="atoggle" type="checkbox" />
-  <div class="atoggle">
-    <div class="atoggle-button"></div>
-  </div>
-</div><div id="tooltip">Project made for Light Mode</div>`;
+header.innerHTML = `<a href="../"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.19 230.96">
+<g id="Layer_1-2" data-name="Layer 1">
+  <path class="cls-1" d="M134.1,117.64l-42.99-12.34c-4.08-1.17-5.39-6.28-2.37-9.25l49.84-49.48c14.77-14.66,8.31-39.79-11.69-45.52h0c-9.65-2.76-20.05,0-27.04,7.22L11.26,99.51c-9.53,9.85-5.15,26.3,8,30.12l38.27,11.12c3.77,1.08,5.26,5.65,2.82,8.75L3.51,209.43c-6.59,6.94-3.46,18.4,5.74,21.04h0c3.58,1.03,7.44,.44,10.55-1.62l119.28-78.76c12.88-8.51,9.86-28.19-4.97-32.45Z"/>
+</g>
+</svg>Sajid</a>`;
 
 // Tooltip
 var aswitch = document.querySelector(".aswitch");

@@ -1,12 +1,13 @@
 :root {
-  --ff: "DM Sans", sans-serif;
-  --colorp: #333;
-  --colora: #999;
+  --ff: "Montserrat", sans-serif;
+  --colorp: #1e1e1e;
+  --colora: #537fe7;
+  --colora2: #ffe537;
   --colorbody: #f9f9f9;
   --colors: #fff;
   --h1: bold 48px/36px var(--ff);
   --p: 18px/18px var(--ff);
-  --links: bold 18px/18px var(--ff);
+  --links: 18px/18px var(--ff);
 }
 body,
 html {
@@ -64,19 +65,17 @@ p {
   margin-bottom: 40px;
 }
 
-a {
-  text-decoration: none;
-  color: var(--colorp);
-  font: var(--links);
-}
 .btn {
-  background-color: var(--colors);
-  padding: 15px 50px;
-  border-radius: 5px;
+  text-decoration: none;
+  color: var(--colora2);
+  font: var(--links);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: solid 2px var(--colora2);
   transition: 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background-color: var(--colorp);
   color: var(--colors);
+  border: solid 2px var(--colors);
 }

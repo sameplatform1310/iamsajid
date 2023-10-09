@@ -1,14 +1,16 @@
 :root {
-  --ff: "DM Sans", sans-serif;
-  --colorp: #333;
-  --colora: #999;
+  --ff: "Montserrat", sans-serif;
   --colorbody: #f9f9f9;
+  --colora: #537fe7;
+  --colora2: #ffe537;
+  --colorp: #1e1e1e;
   --colors: #fff;
-  --h1: bold min(11vw, 54px) / min(11vw, 54px) var(--ff);
+
+  --h1: bold 54px/60px var(--ff);
   --h2: bold 36px/36px var(--ff);
   --h3: bold 24px/30px var(--ff);
   --quote: 24px/30px var(--ff);
-  --links: bold 18px/18px var(--ff);
+  --links: 18px/18px var(--ff);
   --p: 18px/30px var(--ff);
   --subtext: 12px/20px var(--ff);
   --transition: 0.3s ease-in-out;
@@ -17,16 +19,21 @@
 
 .dark-mode {
   --colorp: #f9f9f9;
-  --colora: #999;
-  --colorbody: #333;
-  --colors: #444;
+  --colora: #ffe537;
+  --colora2: #537fe7;
+  --colorbody: #1e1e1e;
+  --colors: #333;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
-
+header svg {
+  fill: var(--colora);
+  width: 20px;
+  margin-right: 8px;
+}
 body {
   /* text-wrap: balance; */
   margin: auto;
@@ -36,11 +43,15 @@ body {
 }
 
 /* Toggle switch */
+#mode {
+  display: flex;
+  gap: 8px;
+}
 .switch {
   position: relative;
   display: inline-block;
-  width: 41px;
-  height: 21px;
+  width: 40px;
+  height: 20px;
   border-radius: 11px;
   overflow: hidden;
 }
@@ -58,43 +69,22 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border: solid 1px var(--colorp);
+  background-color: var(--colora);
   border-radius: 20px;
 }
 
 .toggle-button {
   position: relative;
-  height: 20px;
-  width: 20px;
+  margin: 2px 0px 0px 2px;
+  height: 16px;
+  width: 16px;
   border-radius: 10px;
-  background-color: var(--colorp);
+  background-color: var(--colors);
   transition: var(--transition);
 }
 
 input:checked + .toggle .toggle-button {
   transform: translateX(20px);
-}
-
-.toggle-button:before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background-image: url("/img/moon.svg");
-  left: -13px;
-  bottom: 7px;
-  transition: var(--transition);
-}
-
-.toggle-button:after {
-  position: absolute;
-  content: "";
-  background-image: url("/img/sun.svg");
-  right: -14px;
-  top: 4px;
-  height: 10px;
-  width: 11px;
-  transition: var(--transition);
 }
 
 /* header */
@@ -142,10 +132,8 @@ header img {
 
 footer {
   margin-top: 90px;
-  background-color: var(--colorp);
   text-align: center;
   padding: 90px 0px;
-  color: var(--colorbody);
   position: relative;
 }
 
@@ -156,7 +144,7 @@ footer {
 }
 
 .footer-svg:hover {
-  fill: var(--colors);
+  fill: var(--colorp);
 }
 
 #greetings {
@@ -170,19 +158,18 @@ a {
 }
 
 .btn {
-  margin: 40px auto;
-  background-color: var(--colors);
-  border: solid 2px var(--colorp);
-  padding: 15px 50px;
-  text-align: center;
   display: inline-block;
-  border-radius: 5px;
+  margin-top: 20px;
+  color: var(--colora);
+  border: solid 2px var(--colora);
+  border-radius: 8px;
+  padding: 12px 24px;
   transition: 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background-color: var(--colorp);
-  color: var(--colors);
+  color: var(--colorp);
+  border: solid 2px var(--colorp);
 }
 
 h1,
@@ -230,47 +217,20 @@ ol {
   max-width: 1080px;
 }
 
-#about {
-  margin-top: 40px;
+.home-hero {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-}
-
-#about > div {
-  flex: 1;
-  min-width: 300px;
-}
-
-#about span {
-  font-size: 24px;
-}
-.skills {
-  display: flex;
-  gap: 40px;
-  box-shadow: var(--shadow);
-  padding: 20px 40px;
-  border-radius: 8px;
-  max-width: fit-content;
-  background-color: var(--colors);
-}
-
-.skills ul {
-  margin-left: -20px;
-}
-
-.p-link {
+  flex-direction: column;
+  height: 600px;
   position: relative;
-  display: inline-block;
-  margin-top: 20px;
 }
-.p-link::after {
-  content: "\27f6";
-  font-size: 28px;
+
+#hero-logo-animation {
   position: absolute;
-  top: 0px;
-  right: -40px;
+  z-index: -1;
+  height: 500px;
 }
 
 .pf-card {
@@ -281,6 +241,9 @@ ol {
   gap: 40px;
   align-items: center;
   flex-wrap: wrap;
+}
+.card1 {
+  margin: 100px auto;
 }
 .pf-image {
   flex: 1.5;
