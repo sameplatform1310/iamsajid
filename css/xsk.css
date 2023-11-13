@@ -35,13 +35,13 @@ img {
 }
 #xsk-img3 {
   margin-top: 100px;
-  background-image: url("/img/XSK/xsk-img3.jpg");
+  background-image: url("/img/XSK/xsk-img3.webp");
   background-position: right;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 #xsk-img4 {
-  background-image: url("/img/XSK/xsk-img4.jpg");
+  background-image: url("/img/XSK/xsk-img4.webp");
   background-position: top;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ img {
   max-width: 720px;
 }
 #xsk-img6 {
-  background-image: url("/img/XSK/xsk-img6.jpg");
+  background-image: url("/img/XSK/xsk-img6.webp");
   background-position: top;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;
@@ -61,14 +61,14 @@ img {
 #xsk-img6 h3 {
   /* display: block; */
   padding: 100px 0px;
-  font: min(100px, 9vmax) / min(100px, 9vmax) "Playfair Display", serif;
+  font: bold min(100px, 9vmax) / min(100px, 9vmax) "Playfair Display", serif;
   color: black;
 }
 #xsk-img6 span {
   color: red;
 }
 #xsk-img7 {
-  background-image: url("/img/XSK/xsk-img7.jpg");
+  background-image: url("/img/XSK/xsk-img7.webp");
   background-position: top;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;
@@ -98,7 +98,7 @@ img {
   color: white;
 }
 #xsk-img8 {
-  background-image: url("/img/XSK/xsk-img8.jpg");
+  background-image: url("/img/XSK/xsk-img8.webp");
   background-position: top;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;
@@ -106,11 +106,11 @@ img {
 #xsk-img8 h3 {
   /* display: block; */
   padding: 200px 0px;
-  font: min(100px, 9vmax) / min(100px, 9vmax) "Playfair Display", serif;
+  font: bold min(100px, 9vmax) / min(100px, 9vmax) "Playfair Display", serif;
   color: white;
 }
 #xsk-logoconcept {
-  background-image: url("/img/XSK/xsk-luxury-logos.jpg");
+  background-image: url("/img/XSK/xsk-luxury-logos.webp");
   background-position: right;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;

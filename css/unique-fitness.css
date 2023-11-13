@@ -1,72 +1,73 @@
-.sections-bg{
+.sections-bg {
   padding: 100px 0px;
   margin-top: auto;
 }
-.sections-bg > *{
+.sections-bg > * {
   margin: 20px auto;
   width: 90vw;
   max-width: 1080px;
 }
 
-.full-images{
+.full-images {
   max-width: 1080px;
   margin: auto;
 }
 
-.img-columns{
+.img-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
-  }
-  .img-columns > img{
-    flex: 1;
-    width: min(510px, 30vmax);
-    background-color: white;
-    }
-    img{
-      box-shadow: none;
-      border-radius: 0px;
-    }
+}
+.img-columns > img {
+  flex: 1;
+  width: min(510px, 30vmax);
+  background-color: white;
+}
+img {
+  box-shadow: none;
+  border-radius: 0px;
+}
 
-#uf-img2{
+#uf-img2 {
   margin-top: 100px;
-  background-image: url("/img/Unique fitness/uf-img2.jpg");
+  background-image: url("/img/Unique fitness/uf-img2.webp");
   color: white;
   background-position: center;
   background-attachment: fixed;
   /* background-repeat: no-repeat; */
-  }
-  #uf-img3{
-    margin-top: 100px;
-    background-image: linear-gradient(#14141450, #141414), url("/img/Unique fitness/uf-img3.jpg");
-    color: white;
-    background-position: center;
-    background-attachment: fixed;
+}
+#uf-img3 {
+  margin-top: 100px;
+  background-image: linear-gradient(#14141450, #141414),
+    url("/img/Unique fitness/uf-img3.webp");
+  color: white;
+  background-position: center;
+  background-attachment: fixed;
   /* background-repeat: no-repeat; */
-  }
-  
-  #uf-animation{
-    margin-top: 100px;
-    background-color: #140000;
-    text-align: center;
-    color: white;
-  }
-  #ufgif img{
-    width: 200px;
-  }
-  
-  .uf-white{
-    background-color: white;
-    color: #140000;
-  }
-  .uf-yellow{
-    background-color: #fff200;
-    color: #140000;
-  }
-  .uf-black{
-    background-color: #140000;
-    color: white;
-  }
-  #uf-type{
-    max-width: 500px;
-  }
+}
+
+#uf-animation {
+  margin-top: 100px;
+  background-color: #140000;
+  text-align: center;
+  color: white;
+}
+#ufgif img {
+  width: 200px;
+}
+
+.uf-white {
+  background-color: white;
+  color: #140000;
+}
+.uf-yellow {
+  background-color: #fff200;
+  color: #140000;
+}
+.uf-black {
+  background-color: #140000;
+  color: white;
+}
+#uf-type {
+  max-width: 500px;
+}
