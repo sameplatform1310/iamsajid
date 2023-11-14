@@ -17,30 +17,33 @@
         viewBox="0 0 326.65 508"
       >
         <defs>
-          <linearGradient id="gradient" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#537fe7">
-              <animate
-                attributeName="stop-color"
-                values="#537fe7; #ffe537; #537fe7"
-                dur="8s"
-                repeatCount="indefinite"
-              />
-            </stop>
-            <stop offset="100%" stop-color="#ffe537">
-              <animate
-                attributeName="stop-color"
-                values="#ffe537; #537fe7; #ffe537"
-                dur="8s"
-                repeatCount="indefinite"
-              />
-            </stop>
-          </linearGradient>
-        </defs>
-        <g id="logo">
           <path
-            class="cls-1"
-            d="M294.3,258.67l-93.08-26.71c-8.82-2.53-11.66-13.59-5.13-20.03l107.89-107.11c31.97-31.74,17.99-86.14-25.32-98.54h0c-20.9-5.98-43.4,.02-58.54,15.62L28.38,219.43c-20.63,21.33-11.16,56.93,17.33,65.2l82.85,24.06c8.16,2.34,11.38,12.23,6.1,18.93L11.59,457.38c-14.26,15.03-7.5,39.83,12.42,45.54h0c7.76,2.23,16.1,.95,22.83-3.5l258.23-170.51c27.88-18.42,21.34-61.04-10.76-70.25Z"
-            style="stroke: url(#gradient); stroke-width: 8px; fill: none"
+            id="p"
+            d="M294.3,258.67l-93.08-26.71c-8.82-2.53-11.66-13.59-5.13-20.03l107.89-107.11c31.97-31.74,17.99-86.14-25.32-98.54h0c-20.9-5.98-43.4,.02-58.54,15.62L28.38,219.43c-20.63,21.33-11.16,56.93,17.33,65.20l82.85,24.06c8.16,2.34,11.38,12.23,6.10,18.93L11.59,457.38c-14.26,15.03-7.5,39.83,12.42,45.54h0c7.76,2.23,16.1,.95,22.83-3.5l258.23-170.51c27.88-18.42,21.34-61.04-10.76-70.25Z"
+          />
+          <animate
+            xlink:href="#a"
+            attributeName="stroke-dashoffset"
+            dur="2s"
+            to="1380"
+            repeatCount="indefinite"
+          />
+        </defs>
+        <g fill="none">
+          <!-- Use a linear gradient for the stroke -->
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color: #537fe7; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #ffe537; stop-opacity: 1" />
+          </linearGradient>
+          <!-- Apply the gradient to the stroke -->
+          <use xlink:href="#p" stroke="var(--colors)" stroke-width="8" />
+          <use
+            id="a"
+            xlink:href="#p"
+            stroke="url(#gradient"
+            stroke-dasharray="200, 1380"
+            stroke-dashoffset="-200"
+            stroke-width="8"
           />
         </g>
       </svg>
@@ -61,7 +64,7 @@
     </div>
     <div class="pf-card">
       <div class="pf-image">
-        <a href="../DMS/"><img src="./DMS/img/finest-paper.webp" /></a>
+        <a href="../dms/"><img src="./dms/img/finest-paper.webp" /></a>
       </div>
       <div class="pf-about">
         <h3>Dunder Mifflin Scranton</h3>
@@ -69,7 +72,7 @@
           Role: Web Designer/Developer <br />
           Built the website as a tribute to the show.
         </p>
-        <a class="btn" href="../DMS/">View Website</a>
+        <a class="btn" href="../dms/">View Website</a>
       </div>
     </div>
     <div class="pf-card">

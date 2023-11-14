@@ -1,10 +1,10 @@
 :root {
   --ff: "Montserrat", sans-serif;
-  --colorbody: #f9f9f9;
+  --colorbody: #fff;
   --colora: #537fe7;
   --colora2: #ffe537;
   --colorp: #1e1e1e;
-  --colors: #fff;
+  --colors: #f2f2f2;
 
   --h1: bold 54px/60px var(--ff);
   --h2: bold 36px/36px var(--ff);
