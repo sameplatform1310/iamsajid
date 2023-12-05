@@ -7,11 +7,12 @@
   --colors: #f2f2f2;
 
   --h1: bold 54px/60px var(--ff);
-  --h2: bold 36px/36px var(--ff);
-  --h3: bold 24px/30px var(--ff);
-  --quote: 24px/30px var(--ff);
+  --h2: bold 36px/48px var(--ff);
+  --h3: bold 24px/36px var(--ff);
+
   --links: 18px/18px var(--ff);
   --p: 18px/30px var(--ff);
+  --p2: 36px/48px var(--ff);
   --subtext: 12px/20px var(--ff);
   --transition: 0.3s ease-in-out;
   --shadow: #00000030 0px 0px 10px 0px;
@@ -197,8 +198,8 @@ h2 {
 h3 {
   font: var(--h3);
 }
-.quote {
-  font: var(--quote);
+.p2 {
+  font: var(--p2);
 }
 p,
 ul,
@@ -220,18 +221,119 @@ ol {
 
 .home-hero {
   display: flex;
-  text-align: center;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 600px;
+  height: 90vh;
   position: relative;
 }
-
 #hero-logo-animation {
+  height: 50vh;
   position: absolute;
   z-index: -1;
-  height: 500px;
+}
+.home-hero h1 {
+  font: var(--p2);
+  position: absolute;
+  width: 300px;
+}
+.dynamic-heading {
+  border-right: 1px solid var(--colorp);
+  font-weight: bold;
+}
+
+#star-bg {
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  fill: var(--colora2);
+  animation: move-stars 100s infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes move-stars {
+  0% {
+    top: -10vh;
+    left: 0vw;
+  }
+  100% {
+    top: 0vh;
+    left: -5vw;
+  }
+}
+.twinkle {
+  animation: twinkling 1s infinite ease-in-out;
+}
+@keyframes twinkling {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Shooting Star */
+.star {
+  z-index: -2;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--colora2);
+  position: relative;
+  transform-origin: 100% 0;
+  animation: star-ani 1s infinite ease-out;
+  animation-direction: normal;
+  opacity: 0;
+}
+
+.star:after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--colora2);
+  border-width: 2px 150px 2px 150px;
+  border-color: transparent transparent var(--colors) var(--colora2);
+  transform: rotate(-45deg) translate3d(1px, -1px, 0);
+  transform-origin: 0% 100%;
+  animation: shooting-ani 1s infinite ease-out;
+  animation-direction: normal;
+}
+
+@keyframes shooting-ani {
+  0% {
+  }
+  50% {
+    transform: scale(1) rotate(-45deg) translate(0px, 0px);
+  }
+  100% {
+    transform: scale(0.5) rotate(-45deg) translate(0px, -1px);
+  }
+}
+
+@keyframes star-ani {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+}
+
+/* Air Particles */
+.air {
+  background-color: var(--colora2);
+  border-radius: 50%;
+  position: absolute;
+  animation: air-ani 0.1s infinite ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  z-index: -1;
 }
 
 .pf-card {
