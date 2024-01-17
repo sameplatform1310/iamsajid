@@ -4,6 +4,7 @@
   --colora: #537fe7;
   --colora2: #ffe537;
   --colorp: #1e1e1e;
+  --colorp2: #333;
   --colors: #f2f2f2;
 
   --h1: bold 54px/60px var(--ff);
@@ -12,6 +13,7 @@
 
   --links: 18px/18px var(--ff);
   --p: 18px/30px var(--ff);
+  --p1: 24px/30px var(--ff);
   --p2: 36px/48px var(--ff);
   --subtext: 12px/20px var(--ff);
   --transition: 0.3s ease-in-out;
@@ -185,6 +187,10 @@ p {
   margin: 10px 0px;
   padding: 0px;
 }
+.p1 {
+  font: var(--p1);
+}
+
 ul {
   margin: 10px;
 }
@@ -336,6 +342,105 @@ ol {
   z-index: -1;
 }
 
+/* flex cards */
+
+.card,
+.card1,
+.card2,
+.card3 {
+  background-color: var(--colorp2);
+  border-radius: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.card3:hover,
+.card2:hover,
+.card1:hover,
+.card:hover {
+  scale: 1.02;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.icons {
+  height: 40px;
+  box-shadow: none;
+}
+.icons2 {
+  height: 32px;
+  box-shadow: none;
+
+  width: 32px;
+}
+.icons1 {
+  height: 60px;
+  box-shadow: none;
+}
+.logo-icon {
+  width: 100px;
+  box-shadow: none;
+}
+
+.flex-cards {
+  width: 90%;
+  max-width: 1080px;
+  margin: 100px auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.flex-cards > div {
+  flex: 1;
+}
+.card > p,
+.card2 > p,
+.card3 > p {
+  margin: 0px;
+  line-height: 22px;
+  color: white;
+}
+
+.card {
+  min-width: 160px;
+  height: 165px;
+}
+.card1 {
+  min-width: 330px;
+  height: 340px;
+}
+.card2 {
+  min-width: 330px;
+  height: 80px;
+  flex-direction: row;
+}
+.card3 {
+  min-width: 330px;
+  height: 165px;
+}
+
+.c1,
+.c2,
+.c3 {
+  display: flex;
+  gap: 10px;
+  min-width: 330px;
+  flex-wrap: wrap;
+}
+
+/* portfolio */
+
+.pro-case {
+  text-align: center;
+  margin-top: 200px;
+}
 .pf-card {
   width: 90vw;
   max-width: 1080px;
@@ -345,9 +450,7 @@ ol {
   align-items: center;
   flex-wrap: wrap;
 }
-.card1 {
-  margin: 100px auto;
-}
+
 .pf-image {
   flex: 1.5;
   min-width: min(100%, 460px);
