@@ -32,6 +32,23 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+/* header */
+header {
+  margin: auto;
+  width: 90%;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 0px;
+  font: var(--h3);
+}
+
 header svg {
   fill: var(--colora);
   width: 20px;
@@ -88,30 +105,6 @@ body {
 
 input:checked + .toggle .toggle-button {
   transform: translateX(20px);
-}
-
-/* header */
-header {
-  margin: auto;
-  width: 90%;
-  max-width: 1080px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 20px 0px;
-  font: var(--h3);
-}
-
-header img {
-  width: 28px;
-  height: 28px;
-  border-radius: 0px;
-  box-shadow: none;
 }
 
 /* To top button */
@@ -254,6 +247,7 @@ ol {
   fill: var(--colora2);
   animation: move-stars 100s infinite;
   animation-fill-mode: forwards;
+  z-index: -2;
 }
 @keyframes move-stars {
   0% {
