@@ -71,12 +71,24 @@ if (title.textContent.trim() === "") {
   }
 }
 
-// Dark mode toggle button
+// Dark mode
 const toggle = document.getElementById("toggle");
-const darkMode = localStorage.getItem("darkMode");
 let modeText = document.querySelector(".mode-text");
 
-if (darkMode === "true") {
+// Check local storage preference
+const localDarkMode = localStorage.getItem("darkMode");
+
+// Check system preference
+const systemDarkMode =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Set mode based on priority: local storage > system preference
+if (localDarkMode === "true") {
+  dark();
+} else if (localDarkMode === "false") {
+  light();
+} else if (systemDarkMode) {
   dark();
 }
 
@@ -92,10 +104,11 @@ function toggleMode() {
 
 function dark() {
   toggle.checked = true;
-  document.body.classList.toggle("dark-mode");
+  document.body.classList.add("dark-mode");
   modeText.innerText = "Dark";
   localStorage.setItem("darkMode", "true");
 }
+
 function light() {
   toggle.checked = false;
   document.body.classList.remove("dark-mode");
