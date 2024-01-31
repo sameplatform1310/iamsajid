@@ -1,25 +1,3 @@
-// Google font
-document.addEventListener("DOMContentLoaded", function () {
-  var head = document.head;
-
-  var link1 = document.createElement("link");
-  link1.rel = "preconnect";
-  link1.href = "https://fonts.googleapis.com";
-  head.appendChild(link1);
-
-  var link2 = document.createElement("link");
-  link2.rel = "preconnect";
-  link2.href = "https://fonts.gstatic.com";
-  link2.crossOrigin = "anonymous";
-  head.appendChild(link2);
-
-  var link3 = document.createElement("link");
-  link3.rel = "stylesheet";
-  link3.href =
-    "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap";
-  head.appendChild(link3);
-});
-
 // Global header
 const header = document.querySelector("header");
 header.innerHTML = `<a href="../"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.19 230.96">
@@ -78,19 +56,26 @@ let modeText = document.querySelector(".mode-text");
 // Check local storage preference
 const localDarkMode = localStorage.getItem("darkMode");
 
-// Check system preference
-const systemDarkMode =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// Check system preference(currently not in use as dark mode by default)
+// const systemDarkMode =
+//   window.matchMedia &&
+//   window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-// Set mode based on priority: local storage > system preference
-if (localDarkMode === "true") {
-  dark();
-} else if (localDarkMode === "false") {
+// Set darkmode by default if localstorage doesnt have any entry or it doesnt have light mode selected
+if (localDarkMode === "false") {
   light();
-} else if (systemDarkMode) {
+} else {
   dark();
 }
+
+// Set mode based on priority: local storage > system preference(currently not in use as dark mode by default)
+// if (localDarkMode === "true") {
+//   dark();
+// } else if (localDarkMode === "false") {
+//   light();
+// } else if (systemDarkMode) {
+//   dark();
+// }
 
 toggle.addEventListener("click", toggleMode);
 
@@ -131,15 +116,18 @@ footer.innerHTML = `<div class="to-top">
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
+
   <path
     d="M18.221,7.206l9.585,9.585c0.879,0.879,0.879,2.317,0,3.195l-0.8,0.801c-0.877,0.878-2.316,0.878-3.194,0  l-7.315-7.315l-7.315,7.315c-0.878,0.878-2.317,0.878-3.194,0l-0.8-0.801c-0.879-0.878-0.879-2.316,0-3.195l9.587-9.585  c0.471-0.472,1.103-0.682,1.723-0.647C17.115,6.524,17.748,6.734,18.221,7.206z"
   />
 </svg>
 </div>
-<a href="https://www.youtube.com/@whosajid" target="_blank"><svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+<a href="https://www.youtube.com/@whosajid" target="_blank"><svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><defs>
+
+</defs><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
 <a href="https://www.linkedin.com/in/whosajid/" target="_blank"><svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a>
 
-<a href="mailto:hello@iamsajid.com"><svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg></a>
+<a href="mailto:hello@iamsajid.com"><svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg></a>
 <p id="greetings"></p>
 <p class="subtext">&copy; ${currentYear} Sajid</p>
 `;

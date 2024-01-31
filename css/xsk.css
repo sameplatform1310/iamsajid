@@ -1,8 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 span {
   font-family: "Playfair Display", serif;
   color: red;
 }
-
+.dark-mode {
+  --colorbody: #fff;
+  --colora: #537fe7;
+  --colora2: #ffe537;
+  --colorp: #1e1e1e;
+  --colors: #f2f2f2;
+}
+.mode-text {
+  display: none;
+}
+.switch {
+  opacity: 0.3;
+  pointer-events: none;
+}
+#mode::before {
+  content: "Disabled";
+  font: var(--subtext);
+}
 .sections-bg {
   padding: 100px 0px;
   margin-top: auto;

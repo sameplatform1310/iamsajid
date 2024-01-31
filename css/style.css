@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 :root {
   --ff: "Montserrat", sans-serif;
   --colorbody: #fff;
@@ -6,6 +7,8 @@
   --colorp: #1e1e1e;
   --colorp2: #333;
   --colors: #f2f2f2;
+
+  --gradient: linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%);
 
   --h1: bold 54px/60px var(--ff);
   --h2: bold 36px/48px var(--ff);
@@ -134,13 +137,15 @@ footer {
 }
 
 .footer-svg {
-  fill: var(--colora);
-  height: 32px;
+  fill: none;
+  height: 80px;
   margin: 0px 16px 32px 16px;
+  stroke: var(--colora);
+  stroke-width: 8;
 }
 
 .footer-svg:hover {
-  fill: var(--colorp);
+  fill: var(--colora);
 }
 
 #greetings {
@@ -156,8 +161,10 @@ a {
 .btn {
   display: inline-block;
   margin-top: 20px;
-  color: var(--colora);
-  border: solid 2px var(--colora);
+  color: var(--colorp);
+  background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
+    linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%) border-box;
+  border: solid 2px transparent;
   border-radius: 8px;
   padding: 12px 24px;
   transition: 0.2s ease-in-out;
@@ -217,123 +224,21 @@ ol {
   margin: 90px auto 0px auto;
   max-width: 1080px;
 }
-
-.home-hero {
+.hero {
+  width: 90vw;
+  max-width: 1080px;
+  margin: auto;
+  height: 80vh;
+  text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 90vh;
-  position: relative;
-}
-#hero-logo-animation {
-  height: 50vh;
-  position: absolute;
-  z-index: -1;
-}
-.home-hero h1 {
-  font: var(--p2);
-  position: absolute;
-  width: 300px;
-}
-.dynamic-heading {
-  border-right: 1px solid var(--colorp);
-  font-weight: bold;
+  justify-content: center;
 }
 
-#star-bg {
-  position: absolute;
-  top: 0vh;
-  left: 0vw;
-  fill: var(--colora2);
-  animation: move-stars 100s infinite;
-  animation-fill-mode: forwards;
-  z-index: -2;
-}
-@keyframes move-stars {
-  0% {
-    top: -10vh;
-    left: 0vw;
-  }
-  100% {
-    top: 0vh;
-    left: -5vw;
-  }
-}
-.twinkle {
-  animation: twinkling 1s infinite ease-in-out;
-}
-@keyframes twinkling {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
-/* Shooting Star */
-.star {
-  z-index: -2;
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--colora2);
-  position: relative;
-  transform-origin: 100% 0;
-  animation: star-ani 1s infinite ease-out;
-  animation-direction: normal;
-  opacity: 0;
-}
-
-.star:after {
-  content: "";
-  position: absolute;
-  border: 2px solid var(--colora2);
-  border-width: 2px 150px 2px 150px;
-  border-color: transparent transparent var(--colors) var(--colora2);
-  transform: rotate(-45deg) translate3d(1px, -1px, 0);
-  transform-origin: 0% 100%;
-  animation: shooting-ani 1s infinite ease-out;
-  animation-direction: normal;
-}
-
-@keyframes shooting-ani {
-  0% {
-  }
-  50% {
-    transform: scale(1) rotate(-45deg) translate(0px, 0px);
-  }
-  100% {
-    transform: scale(0.5) rotate(-45deg) translate(0px, -1px);
-  }
-}
-
-@keyframes star-ani {
-  0% {
-    opacity: 0;
-    transform: scale(0) rotate(0) translate3d(0, 0, 0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
-  }
-}
-
-/* Air Particles */
-.air {
-  background-color: var(--colora2);
-  border-radius: 50%;
-  position: absolute;
-  animation: air-ani 0.1s infinite ease-in-out;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  z-index: -1;
+.hero h1 {
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
 }
 
 /* flex cards */
@@ -523,20 +428,5 @@ video {
   .btn {
     padding: 15px 0px;
     width: 90vw;
-  }
-
-  .skills {
-    display: flex;
-    /* gap: 20px; */
-    box-shadow: var(--shadow);
-    padding: 20px 20px;
-    border-radius: 8px;
-    max-width: fit-content;
-  }
-  .hero-image {
-    display: none;
-  }
-  .scrolltext {
-    display: none;
   }
 }
