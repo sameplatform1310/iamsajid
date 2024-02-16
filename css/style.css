@@ -161,7 +161,6 @@ a {
 .btn {
   display: inline-block;
   margin-top: 20px;
-  color: var(--colorp);
   background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
     linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%) border-box;
   border: solid 2px transparent;
@@ -172,7 +171,6 @@ a {
 }
 
 .btn:hover {
-  color: var(--colorp);
   border: solid 2px var(--colorp);
 }
 
@@ -364,6 +362,20 @@ ol {
 .pf-image img:hover {
   transform: scale(1.01);
   transition: var(--transition);
+}
+
+.design-cards {
+  width: 90vw;
+  max-width: 1080px;
+  margin: 100px auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.design-cards .pf-card {
+  max-width: 500px;
+  margin: 100px auto;
 }
 
 img,
