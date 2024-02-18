@@ -12,23 +12,6 @@ header.innerHTML = `<a href="../"><svg id="Layer_2" data-name="Layer 2" xmlns="h
   </div>
 </label></div>`;
 
-// Google Analytics
-var gaScript = document.createElement("script");
-gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-Y5FVPTSY07";
-gaScript.async = true;
-document.head.appendChild(gaScript);
-
-function initializeAnalytics() {
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "G-Y5FVPTSY07");
-}
-
-gaScript.onload = initializeAnalytics;
-
 // Global favicon
 const favicon = document.createElement("link");
 favicon.setAttribute("rel", "shortcut icon");
@@ -36,49 +19,16 @@ favicon.setAttribute("href", "favicon.png");
 favicon.setAttribute("type", "image/x-icon");
 document.head.appendChild(favicon);
 
-// Dynamic Title
-const title = document.querySelector("title");
-const h1 = document.querySelector("h1");
-
-if (title.textContent.trim() === "") {
-  if (h1) {
-    const h1Value = h1.innerText;
-    title.textContent = `${h1Value} - Sajid`;
-  } else {
-    title.textContent = "Sajid";
-  }
-}
-
 // Dark mode
 const toggle = document.getElementById("toggle");
 let modeText = document.querySelector(".mode-text");
-
-// Check local storage preference
 const localDarkMode = localStorage.getItem("darkMode");
-
-// Check system preference(currently not in use as dark mode by default)
-// const systemDarkMode =
-//   window.matchMedia &&
-//   window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-// Set darkmode by default if localstorage doesnt have any entry or it doesnt have light mode selected
 if (localDarkMode === "false") {
   light();
 } else {
   dark();
 }
-
-// Set mode based on priority: local storage > system preference(currently not in use as dark mode by default)
-// if (localDarkMode === "true") {
-//   dark();
-// } else if (localDarkMode === "false") {
-//   light();
-// } else if (systemDarkMode) {
-//   dark();
-// }
-
 toggle.addEventListener("click", toggleMode);
-
 function toggleMode() {
   if (toggle.checked) {
     dark();
