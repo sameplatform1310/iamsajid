@@ -433,16 +433,20 @@ video {
 }
 
 footer {
-  margin-top: 90px;
+  margin-top: 200px;
   text-align: center;
   padding: 90px 0px;
   position: relative;
 }
-
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
 .footer-svg {
   fill: none;
-  height: 80px;
-  margin: 0px 16px 32px 16px;
+  width: 10vw;
   stroke: var(--colora);
   stroke-width: 8;
 }
