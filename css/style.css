@@ -442,11 +442,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5vw;
+  gap: 4vw;
 }
 .footer-svg {
   fill: none;
-  width: 10vw;
+  width: 9vw;
   stroke: var(--colora);
   stroke-width: 8;
 }
