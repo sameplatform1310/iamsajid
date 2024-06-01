@@ -25,6 +25,7 @@
 
 .dark-mode {
   --colorp: #f9f9f9;
+  --colorp2: #fff;
   --colora: #ffe537;
   --colora2: #537fe7;
   --colorbody: #1e1e1e;
@@ -44,7 +45,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-header a {
+.sajid {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -58,7 +59,6 @@ header svg {
   margin-right: 8px;
 }
 body {
-  /* text-wrap: balance; */
   margin: auto;
   background-color: var(--colorbody);
   color: var(--colorp);
@@ -195,9 +195,9 @@ ol {
   font: var(--subtext);
 }
 
-.section {
+section {
   width: 90%;
-  margin: 90px auto 0px auto;
+  margin: 200px auto;
   max-width: 1080px;
 }
 .hero {
@@ -223,7 +223,7 @@ ol {
 .card1,
 .card2,
 .card3 {
-  background-color: var(--colorp2);
+  background-color: #333;
   border-radius: 12px;
   flex: 1;
   display: flex;
@@ -342,27 +342,13 @@ ol {
   transition: var(--transition);
 }
 
-.design-cards {
-  width: 90vw;
-  max-width: 1080px;
-  margin: 100px auto;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.design-cards .pf-card {
-  max-width: 500px;
-  margin: 100px auto;
-}
-
 img,
 video {
   width: 100%;
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
-.section > img {
+section > img {
   margin: 20px 0px;
 }
 
@@ -400,19 +386,6 @@ video {
   box-shadow: var(--shadow);
 }
 
-.full-images {
-  display: flex;
-  flex-wrap: wrap;
-}
-.half-images {
-  display: flex;
-  flex-wrap: wrap;
-}
-.half-images > img {
-  flex: 1;
-  width: min(400px, 40vmax);
-}
-
 /* To top button */
 .to-top {
   position: fixed;
@@ -440,17 +413,33 @@ footer {
 }
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 4vw;
+  gap: max(4vw, 30px);
 }
 .footer-svg {
   fill: none;
-  width: 9vw;
+  width: max(60px, 7vw);
   stroke: var(--colora);
   stroke-width: 8;
+  transition: var(--transition);
+}
+.footer-svg-text {
+  margin-top: -8px;
+  opacity: 0;
+  font: var(--links);
+  transform: translateY(-16px);
+  transition: var(--transition);
 }
 
 .footer-svg:hover {
   fill: var(--colora);
+  transform: translateY(-16px);
+  transition: var(--transition);
+}
+.footer-svg:hover + .footer-svg-text {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: var(--transition);
 }

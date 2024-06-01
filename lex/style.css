@@ -51,13 +51,18 @@ body {
   background-color: var(--colorprimary);
   color: var(--colorsecondary);
 }
-.section {
+section {
   width: 90vw;
   max-width: 1080px;
   margin: auto;
 }
 
 /* Header */
+.header {
+  width: 90vw;
+  max-width: 1080px;
+  margin: auto;
+}
 header {
   margin-top: 20px;
   display: flex;
@@ -236,6 +241,11 @@ img {
 .footer {
   margin: 200px auto;
   text-align: center;
+}
+.footer-section {
+  width: 90vw;
+  max-width: 1080px;
+  margin: auto;
 }
 .footer-links {
   margin-top: 40px;

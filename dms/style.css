@@ -54,7 +54,7 @@ body {
   background-color: var(--colorsecondary);
   color: var(--colorprimary);
 }
-.section {
+section {
   width: 90vw;
   max-width: 1080px;
   margin: 100px auto;
