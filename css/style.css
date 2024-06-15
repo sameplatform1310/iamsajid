@@ -416,11 +416,13 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: max(4vw, 30px);
+  gap: clamp(3vw, 30px, 5vw);
+  gap: 4vmax;
 }
 .footer-svg {
   fill: none;
-  width: max(60px, 7vw);
+  width: clamp(3vw, 60px, 10vw);
+  width: 8vmax;
   stroke: var(--colora);
   stroke-width: 8;
   transition: var(--transition);
