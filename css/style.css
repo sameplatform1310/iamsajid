@@ -389,7 +389,7 @@ section > img {
 /* To top button */
 .to-top {
   position: fixed;
-  top: 85vh;
+  top: 70vh;
   right: 5vw;
   display: none;
   align-items: center;
