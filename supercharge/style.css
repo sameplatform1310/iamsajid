@@ -637,6 +637,28 @@ input:checked + .css-toggle {
   transform-origin: center;
   animation: swing 4s ease-in-out infinite;
 }
+
+/* Better Shadows */
+.better-shadows{
+  background: #f2f2f2;
+  padding: 40px;
+  color: #1e1e1e;
+  gap: 20px;
+}
+.better-shadow{
+  padding: 40px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 4px #00000030, 0px 12px 12px #00000015;
+}
+.dark-shadow{
+  box-shadow: 0px 4px 4px #1e1e1e30;
+}
+.light-shadow{
+  box-shadow: 0px 12px 12px #1e1e1e15;
+}
+
+
 /* coming soon */
 .coming-soon {
   font: var(--h1);

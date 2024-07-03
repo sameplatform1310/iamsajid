@@ -178,3 +178,10 @@ const swingT = document.querySelector(".swing");
 swingToggle.addEventListener("click", () => {
   swingT.classList.toggle("no-swing");
 });
+
+// shadow
+const shadowToggle = document.getElementById("shadow-toggle");
+const shadowT = document.querySelector(".better-shadow");
+shadowToggle.addEventListener("click", () => {
+  shadowT.classList.toggle("dark-shadow");
+});
