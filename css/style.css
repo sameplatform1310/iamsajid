@@ -1,26 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 :root {
   --ff: "Montserrat", sans-serif;
-  --colorbody: #fff;
-  --colora: #537fe7;
-  --colora2: #ffe537;
-  --colorp: #1e1e1e;
-  --colorp2: #333;
-  --colors: #f2f2f2;
-
-  --gradient: linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%);
-
-  --h1: bold 54px/60px var(--ff);
-  --h2: bold 36px/48px var(--ff);
-  --h3: bold 24px/36px var(--ff);
-
-  --links: 18px/18px var(--ff);
-  --p: 18px/30px var(--ff);
-  --p1: 24px/30px var(--ff);
-  --p2: 36px/48px var(--ff);
-  --subtext: 12px/20px var(--ff);
-  --transition: 0.3s ease-in-out;
-  --shadow: #00000030 0px 0px 10px 0px;
+    --ff2: "Fira Code", monospace;
+    --colorbody: #fff;
+    --colora: #537fe7;
+    --colora2: #ffe537;
+    --colorp: #1e1e1e;
+    --colorp2: #333;
+    --colors: #f2f2f2;
+    --gradient: linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%);
+  
+    --h1: bold clamp(2.5rem, 3vw, 4rem)/1.2em var(--ff);
+    --h2: bold clamp(2rem, 2.5vw, 3rem)/1.5em var(--ff);
+    --h3: bold 1.5rem/1.5em var(--ff);
+  
+    --links: 1rem/1em var(--ff);
+    --p: 1rem/1.8em var(--ff);
+    --p1: 1.2rem/1.5em var(--ff);
+    --p2: 1.5rem/1.5em var(--ff);
+    --subtext: .75rem/1.8em var(--ff);
+    --pre: 1rem/1.5em var(--ff2);
+    --transition: 0.3s ease-in-out;
+    --shadow: #00000030 0px 4px 10px 0px;
 }
 
 .dark-mode {

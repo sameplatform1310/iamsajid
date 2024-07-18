@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- sidebar links -->
-    <div class="css-links">
+    <!-- <div class="css-links">
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -40,7 +40,7 @@
       <a href="#animations" class="css-link">Animations</a>
       <a href="#better-shadows" class="css-link">Better Shadows</a>
       <a href="#mobbin" class="css-link">UI Library</a>
-    </div>
+    </div> -->
     <header></header>
 
     <section>
@@ -162,6 +162,70 @@ background: var(--colors);  border-radius: 8px;  overflow: hidden;}
             >Learn more</a
           >
         </div>
+      </div>
+      <!-- Radio buttons -->
+      <h3 class="radio-btns">Bland elements 👉 Cards</h3>
+      
+      <pre>Check the full code on Codepen 👇<button class="copy-btn">Copy</button></pre>
+      
+      <div id="mode">
+        <p class="subtext">Before</p>
+        <label class="css-switch">
+          <input id="radio-toggle" type="checkbox" />
+          <div class="css-toggle">
+            <div class="css-toggle-button"></div>
+          </div>
+        </label>
+        <p class="subtext">After</p>
+        <a href="https://codepen.io/whosajid/pen/poXgZVp" target="_blank" class="sc-codepen subtext">See on Codepen</a>
+      </div>
+      <!-- radio buttons -->
+      <br><br> <h3>Pick a font size</h3>
+      <div class="no-radio-buttons">
+        
+        
+          <input type="radio" id="small" name="font_size" value="small">
+          <label for="small">Small - 16 pixels (Smartphones)</label>
+       
+        <br>
+          <input type="radio" id="medium" name="font_size" value="medium">
+          <label for="medium">Medium - 18 pixels (Laptops)</label>
+        <br>
+       
+          <input type="radio" id="large" name="font_size" value="large">
+          <label for="large">Large - 20 pixels (Desktops)</label> 
+       <br>
+          <input type="radio" id="xtreme" name="font_size" value="xtreme">
+          <label for="xtreme">Extreme - 24 pixels (4K screens)</label>
+      
+        
+      </div>
+
+      <!-- radio cards -->
+      <div class="radio-cards">
+        
+        <div class="radio-card">
+          <input type="radio" id="small" name="font_size" value="small"><label for="small">SMALL</label><br> <br>
+          <p><span class="pixels-no">16</span>
+          <b>pixels</b><br>Smartphones</p>
+        </div>
+        <div class="radio-card">
+          <input type="radio" id="small" name="font_size" value="small"><label for="small">MEDIUM</label><br> <br>
+          <p><span class="pixels-no">18</span>
+          <b>pixels</b><br>Laptops</p>
+        </div>
+        <div class="radio-card">
+          <input type="radio" id="small" name="font_size" value="small"><label for="small">LARGE</label><br> <br>
+          <p><span class="pixels-no">20</span>
+          <b>pixels</b><br>Desktops</p>
+        </div>
+        <div class="radio-card">
+          <input type="radio" id="small" name="font_size" value="small"><label for="small">EXTREME</label><br> <br>
+          <p><span class="pixels-no">24</span>
+          <b>pixels</b><br>4K screens</p>
+        </div>
+        
+        
       </div>
     </section>
     <!-- Hover Effects -->
@@ -406,7 +470,7 @@ li:nth-child(3){list-style: "👖 ";}<button class="copy-btn">Copy</button></pre
           >See on Codepen</a
         >
       </div>
-      <p class="p1">Good Habbits</p>
+      <p class="p1">Good Habits</p>
       <ul class="list-toggle">
         <li>Wake up before noon</li>
         <li>Eat breakfast</li>
@@ -667,7 +731,7 @@ animation: bg 10s ease-ininfinite;
     </section>
 
     <footer></footer>
+    <script src="./shf.js"></script>
     <script src="./script.js"></script>
-    <script src="../js/hf.js"></script>
   </body>
 </html>

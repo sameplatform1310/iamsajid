@@ -1,8 +1,9 @@
+
 // hamburger
 const hamburger = document.querySelector(".hamburger");
 const cssLink = document.querySelectorAll(".css-link");
 const cssLinks = document.querySelector(".css-links");
-hamburger.addEventListener("click", () => {
+cssLinks.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   cssLinks.classList.toggle("css-links-active");
   cssLink.forEach((link) => {
@@ -63,6 +64,18 @@ const politeCard = document.querySelector(".polite-card");
 cardToggle.addEventListener("click", () => {
   cssCard.classList.toggle("no-css-card");
   politeCard.classList.toggle("no-polite-card");
+});
+
+// radio cards
+const radioToggle = document.getElementById("radio-toggle");
+const radioButtons = document.querySelector(".no-radio-buttons");
+const radioCards = document.querySelector(".radio-cards");
+radioToggle.addEventListener("click", () => {
+  radioButtons.classList.toggle("no-radio-buttons");
+  radioButtons.classList.toggle("radio-buttons");
+
+  radioCards.classList.toggle("radio-cards");
+  radioCards.classList.toggle("no-radio-cards");
 });
 
 // hover-scale

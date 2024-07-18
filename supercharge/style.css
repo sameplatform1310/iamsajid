@@ -1,26 +1,15 @@
-:root {
-  --ff: "Montserrat", sans-serif;
-  --colorbody: #fff;
-  --colora: #537fe7;
-  --colora2: #ffe537;
-  --colorp: #1e1e1e;
-  --colorp2: #333;
-  --colors: #f2f2f2;
-
-  --gradient: linear-gradient(45deg, var(--colora) 0%, var(--colora2) 100%);
-
-  --h1: bold 54px/60px var(--ff);
-  --h2: bold 36px/48px var(--ff);
-  --h3: bold 24px/36px var(--ff);
-
-  --links: 18px/18px var(--ff);
-  --p: 18px/30px var(--ff);
-  --p1: 24px/30px var(--ff);
-  --p2: 36px/48px var(--ff);
-  --subtext: 12px/20px var(--ff);
-  --transition: 0.3s ease-in-out;
-  --shadow: #00000030 0px 0px 10px 0px;
+:root{
+  --colorgray: hsl(0, 0%, 40%);
+  --graygradient: linear-gradient(0deg, hsl(0, 0%, 97%), hsl(0, 0%, 100%));
+  
 }
+.dark-mode{
+  --colorgray: hsl(0, 0%, 60%);
+  --graygradient: linear-gradient(45deg, hsl(0, 0%, 20%), hsl(0, 0%, 15%));
+}
+
+
+
 .no-pre {
   display: none;
 }
@@ -48,21 +37,29 @@
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
-
+header{
+  position: sticky;
+  top: 0;
+  background: var(--colorbody);
+  z-index: 5;
+}
+.sajid{
+  margin-left: 60px;
+}
 .css-links {
-  position: fixed;
+  position: absolute;
   top: 16px;
-  left: 0;
+  left: 0px;
   display: flex;
   align-items: flex-start;
   gap: 28px;
   flex-direction: column;
   padding: 12px 16px;
-  background: linear-gradient(var(--colorbody), var(--colorbody)) padding-box,
-    linear-gradient(0deg, var(--colora) 0%, var(--colora2) 100%) border-box;
-  border: solid 1px transparent;
+  background: var(--graygradient);
   border-radius: 30px;
   z-index: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
 }
 .css-links-active {
   padding-bottom: 40px;
@@ -88,7 +85,7 @@
 pre {
   padding: 20px;
   position: relative;
-  font-size: 18px;
+  font: var(--pre);
   background: var(--colors);
   border-radius: 10px;
   white-space: pre-wrap;
@@ -237,6 +234,82 @@ input:checked + .css-toggle {
   padding: 0px;
 }
 
+/* radio buttons */
+.radio-btns{
+  margin-top: 100px;
+}
+.no-radio-buttons {
+  display: none;
+}
+.radio-buttons{
+  display: block;
+}
+
+#small {
+  margin-top: 20px;
+}
+
+.radio-buttons label {
+  font: var(--p);
+}
+/* radio cards */
+
+.radio-cards{
+  font: var(--p);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.no-radio-cards {
+  display: none;
+}
+.radio-card{
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--graygradient);
+  position: relative;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.radio-card input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer; 
+}
+
+.radio-card input[type="radio"]::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: none;
+  border: solid 2px var(--colorp);
+  border-radius: 50%;
+}
+.radio-card input[type="radio"]:checked::before {
+  border: solid 2px var(--colora2);
+  background-color: var(--colora2);
+  background-image: url('/supercharge/tick.svg');
+  background-size: cover;
+  
+}
+
+.radio-card label{
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--colorgray);
+  margin-left: -8px;
+}
+.pixels-no{
+  font: var(--h2);
+  line-height: .5em;
+}
 /* hover-scale */
 .scale-toggle:hover {
   scale: 1.05;
