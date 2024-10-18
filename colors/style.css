@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Syne:wght@400..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 :root {
-    --ff: "Syne", sans-serif;
+    --ff: "Montserrat", sans-serif;
     --ff2: "Fira Code", monospace;
     --h1: 800 2rem/1.2em var(--ff);
     --p: 400 1rem/1.5em var(--ff);

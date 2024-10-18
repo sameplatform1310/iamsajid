@@ -1,28 +1,14 @@
-:root {
-  --ff: "Montserrat", sans-serif;
-  --colorp: #1e1e1e;
-  --colora: #537fe7;
-  --colora2: #ffe537;
-  --colorbody: #f9f9f9;
-  --colors: #fff;
-  --h1: bold 48px/36px var(--ff);
-  --p: 18px/18px var(--ff);
-  --links: 18px/18px var(--ff);
-}
-body,
-html {
+ body, html{
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
+} 
 
 .video-container {
   position: relative;
-  width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 video {
@@ -51,31 +37,4 @@ video {
 .error404 {
   margin-top: 50vh;
   text-align: center;
-}
-
-h1 {
-  font: var(--h1);
-  color: var(--colors);
-  margin: 0px;
-}
-
-p {
-  font: var(--p);
-  color: var(--colors);
-  margin-bottom: 40px;
-}
-
-.btn {
-  text-decoration: none;
-  color: var(--colora2);
-  font: var(--links);
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: solid 2px var(--colora2);
-  transition: 0.2s ease-in-out;
-}
-
-.btn:hover {
-  color: var(--colors);
-  border: solid 2px var(--colors);
 }
