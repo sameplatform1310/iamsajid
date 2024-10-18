@@ -130,6 +130,7 @@ ul {
 }
 
 h1 {
+  color: var(--gray60);
   font: var(--h1);
 }
 
