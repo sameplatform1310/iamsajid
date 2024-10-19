@@ -1,112 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 :root {
   --ff: "Montserrat", sans-serif;
   --ff2: "Fira Code", monospace;
+  --h1: bold 2rem/1.2em var(--ff);
+  --h2: bold 1.5/1.5em var(--ff);
+  --h3: bold 1.2rem/1.5em var(--ff);
+  --links: bold 1rem/1em var(--ff);
+  --p: 1rem/1.8em var(--ff);
+  --subtext: .75rem/1.8em var(--ff);
+  --transition: 0.3s ease-in-out;
+}
+:root {
   --gray10: hsl(0, 0%, 10%);
   --gray30: hsl(0, 0%, 30%);
   --gray60: hsl(0, 0%, 60%);
   --gray90: hsl(0, 0%, 90%);
-  --colora: #537fe7;
-  --colora2: #ffe537;
-  --gradient: linear-gradient(45deg, var(--colora)0%, var(--colora2) 100%);
-
-  --h1: bold 2.5rem/1.2em var(--ff);
-  --h2: bold 2/1.5em var(--ff);
-  --h3: bold 1.5rem/1.5em var(--ff);
-
-  --links: bold 1rem/1em var(--ff);
-  --p: 1rem/1.8em var(--ff);
-  --p1: 1.2rem/1.5em var(--ff);
-  --p2: 1.5rem/1.5em var(--ff);
-  --subtext: .75rem/1.8em var(--ff);
-  --pre: 1rem/1.5em var(--ff2);
-  --transition: 0.3s ease-in-out;
-  --shadow: #00000030 0px 4px 10px 0px;
+  --accent: hsl(222, 76%, 62%);
+  --accent-dark: hsl(52, 100%, 61%);
+  --accent-dark95: hsl(52, 100%, 95%);
 }
-
-/* System preferred color scheme */
+/* System mode (uses system preference) */
 @media (prefers-color-scheme: dark) {
   :root {
     --gray10: hsl(0, 0%, 90%);
     --gray30: hsl(0, 0%, 60%);
     --gray60: hsl(0, 0%, 30%);
     --gray90: hsl(0, 0%, 10%);
-    --colora: #ffe537;
-    --colora2: #537fe7;
+    --accent: hsl(52, 100%, 61%);
+    --accent40: hsl(52, 100%, 40%);
+    --accent-dark: hsl(222, 76%, 62%);
+    --accent-dark95: hsl(222, 76%, 5%);
   }
 }
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+/* Light mode (default) */
+html.light-mode {
+  --gray10: hsl(0, 0%, 10%);
+  --gray30: hsl(0, 0%, 30%);
+  --gray60: hsl(0, 0%, 60%);
+  --gray90: hsl(0, 0%, 90%);
+  --accent: hsl(222, 76%, 62%);
+  --accent-dark: hsl(52, 100%, 61%);
+  --accent-dark95: hsl(52, 100%, 95%);
 }
 
-/* header */
-header {
-  margin: auto;
-  width: 90%;
-  max-width: 1080px;
-}
-
-.sajid {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 20px 0px;
-}
-
-header svg {
-  fill: var(--colora);
-  width: 12px;
-  margin-right: 4px;
+/* Dark mode */
+html.dark-mode {
+  --gray10: hsl(0, 0%, 90%);
+  --gray30: hsl(0, 0%, 60%);
+  --gray60: hsl(0, 0%, 30%);
+  --gray90: hsl(0, 0%, 10%);
+  --accent: hsl(52, 100%, 61%);
+  --accent40: hsl(52, 100%, 40%);
+  --accent-dark: hsl(222, 76%, 62%);
+  --accent-dark95: hsl(222, 76%, 5%);
 }
 
 
-body {
-  margin: auto;
-  background-color: var(--gray90);
-  color: var(--gray10);
-  transition: var(--transition);
-}
 
-main {
-  width: 90%;
-  margin: 40px auto;
-  max-width: 1080px;
-}
-
-
-/* links & buttons */
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--gray10);
-  font: var(--links);
-  position: relative;
-}
-
-.btn{
-  margin: 20px 0px;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 0px;
-  height: 4px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--colora) 0%, var(--colora2) 100%);
-  transition: var(--transition);
-}
-
-.btn:hover::before {
-  width: 100%;
-  transition: var(--transition);
-}
+/* Global CSS */
 
 h1,
 h2,
@@ -121,16 +73,11 @@ p {
   padding: 0px;
 }
 
-.p1 {
-  font: var(--p1);
-}
-
 ul {
   margin: 10px;
 }
 
 h1 {
-  color: var(--gray60);
   font: var(--h1);
 }
 
@@ -140,10 +87,6 @@ h2 {
 
 h3 {
   font: var(--h3);
-}
-
-.p2 {
-  font: var(--p2);
 }
 
 p,
@@ -159,24 +102,107 @@ ol {
 .subtext {
   font: var(--subtext);
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: auto;
+  background: linear-gradient(120deg, var(--gray90)0%, var(--accent-dark95)30%, var(--gray90)100%);
+  min-height: 100vh;
+  color: var(--gray10);
+}
+
+/* links & buttons */
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--gray10);
+  font: var(--links);
+  position: relative;
+}
+
+.btn {
+  margin: 20px 0px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+  transition: var(--transition);
+}
+
+.btn:hover::before {
+  width: 100%;
+  transition: var(--transition);
+}
 
 section {
   width: 90%;
-  margin: 200px auto;
+  margin: 40px auto;
   max-width: 1080px;
 }
 
+/* header */
+header {
+  margin: auto;
+  width: 90%;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sajid {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 20px 0px;
+}
+
+header svg {
+  fill: var(--accent);
+  width: 12px;
+  margin-right: 4px;
+}
+
+/* dark mode */
+#mode{
+  cursor: pointer;
+  user-select: none;
+}
+
+#mode svg{
+  fill: var(--gray10);
+  width: 20px;
+}
 
 
+/* Footer */
+
+footer {
+  width: 90%;
+  margin: 0px auto;
+  max-width: 1080px;
+  padding: 40px 0px;
+}
 .socials {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
 }
+
 .socials-svg {
   fill: var(--gray30);
-  width: 32px;
+  width: 24px;
   transition: var(--transition);
 }
 
@@ -184,9 +210,7 @@ section {
   fill: var(--gray10);
 }
 
-footer {
-  width: 90%;
-  margin: 0px auto;
-  max-width: 1080px;
-  padding: 40px 0px;
+/* css-tricks */
+.note {
+  max-width: 720px;
 }
